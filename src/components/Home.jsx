@@ -17,7 +17,7 @@ const Home = () => {
                         <button 
                             type="button"
                             className="btn btn-primary mt-3"
-                            onClick={() => window.open('https://pagespeed.web.dev/report?url=http%3A%2F%2Ftotallytotallyamazing.com%2Fprojects%2F&form_factor=desktop', '_blank')}
+                            onClick={() => window.open('https://pagespeed.web.dev/report?url=https%3A%2F%2Fmaster.dctomhdld73zy.amplifyapp.com%2F&form_factor=desktop', '_blank')}
                         >
                             PageSpeed Test
                         </button>
