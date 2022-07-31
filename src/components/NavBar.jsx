@@ -20,25 +20,25 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                     
                         <ul className="navbar-nav mt-2 mt-sm-0">
-                            <li className="nav-item">
-                                <Link to={'/employees'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">Employees</span></Link>
-                                <Link to={'/employees'} className="nav-link d-none d-sm-block">Employees</Link>
+                        <li className="nav-item">
+                                <Link to={'/carousels'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">Carousels</span></Link>
+                                <Link to={'/carousels'} className="nav-link d-none d-sm-block">Carousels</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to={'/counter'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">Counter</span></Link>
                                 <Link to={'/counter'} className="nav-link d-none d-sm-block">Counter</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={'/users'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">Users</span></Link>
-                                <Link to={'/users'} className="nav-link d-none d-sm-block">Users</Link>
+                                <Link to={'/employees'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">Employees</span></Link>
+                                <Link to={'/employees'} className="nav-link d-none d-sm-block">Employees</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to={'/rowcol'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">RowCol</span></Link>
                                 <Link to={'/rowcol'} className="nav-link d-none d-sm-block">RowCol</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to={'/carousels'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">Carousels</span></Link>
-                                <Link to={'/carousels'} className="nav-link d-none d-sm-block">Carousels</Link>
+                                <Link to={'/users'} className="nav-link d-sm-none"><span data-bs-target="#navbarNav" data-bs-toggle="collapse">Login</span></Link>
+                                <Link to={'/users'} className="nav-link d-none d-sm-block">Login</Link>
                             </li>
                         </ul>
                     </div>

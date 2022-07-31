@@ -15,11 +15,11 @@ function App() {
             <NavBar />
             <Routes>
                 <Route path={'/'} element={<Home />} />
-                <Route path={'/employees'} element={<EmployeesRedux />} />
-                <Route path={'/counter'} element={<CounterRedux />} />
-                <Route path={'/users'} element={<UserListRedux />} />
-                <Route path={'/rowcol'} element={<RowColRedux />} />
                 <Route path={'/carousels'} element={<Carousels />} />
+                <Route path={'/counter'} element={<CounterRedux />} />
+                <Route path={'/employees'} element={<EmployeesRedux />} />
+                <Route path={'/rowcol'} element={<RowColRedux />} />
+                <Route path={'/users'} element={<UserListRedux />} />
             </Routes>
         </React.Fragment>
     );
