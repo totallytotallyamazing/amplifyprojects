@@ -21,7 +21,7 @@ const userListSlice = createSlice({
     name: 'users',
     initialState: initialState,
     extraReducers: (builder) => {
-        builder.addCase(getUsers.pending, (state, action) => {
+        builder.addCase(getUsers.pending, (state) => {
             // if (state.loading === false) {
             //     state.loading = true;
             //     state.currentRequestId = action.meta.requestId
@@ -40,7 +40,7 @@ const userListSlice = createSlice({
         
             state.loading = false;
             state.users = action.payload;
-        }).addCase(getUsers.rejected, (state, action) => {
+        }).addCase(getUsers.rejected, (state) => {
         //     const { requestId } = action.meta
         //     if (
         //     state.loading === false &&
