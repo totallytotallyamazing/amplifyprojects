@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'; // , { useCallback, useEffec
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from '../redux/features/user-list.features';
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
+// import '@aws-amplify/ui-react/styles.css';
 
 import Auth from '@aws-amplify/auth';
 
@@ -62,16 +62,17 @@ const UserListRedux = () => {
 
     return (
         <React.Fragment>
+            <div className="container mt-5">
             {
-                route === 'signIn' &&
-                <div className="container mt-5">
+                (route === 'signIn' || route === 'signUp') &&
+                
                     <div className="row">
                         <div className="col mt-3">
                             <p className="h3 text-primary">User List</p>
                             <p>Please Login to Authenticate</p>
                         </div>
                     </div>
-                </div>
+                
             }
             <Authenticator>
                 {({ signOut, user }) => ( 
@@ -129,6 +130,7 @@ const UserListRedux = () => {
                     </div>
                 )}
             </Authenticator>
+            </div>
         </React.Fragment>
     );
 };
