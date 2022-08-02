@@ -1,6 +1,5 @@
 import React from 'react';
 import desktop from '../img/desktop.png';
-import mobile from '../img/mobile.png';
 
 const Home = () => {
     return (
@@ -24,10 +23,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-6 text-center mt-3">
-                        <img src={mobile} className="screens" alt="Google PageSpeed Insights Desktop" />
-                    </div>
-                    <div className="col-md-6 text-center mt-3">
+                    <div className="col-md-12 text-center mt-3">
                         <img src={desktop} className="screens" alt="Google PageSpeed Insights Mobile" />
                     </div>
                 </div>
