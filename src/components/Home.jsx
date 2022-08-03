@@ -20,7 +20,7 @@ const Home = () => {
                 <div className="container mt-5">
                     <div className="row">
                         <div className="col mt-3">
-                            <h3 className="text-primary">Build: <span className="text-secondary">npm install bootstrap @fortawesome/fontawesome-free axios react-router-dom react-redux @reduxjs/toolkit</span></h3>
+                            <h3 className="text-primary">Build: <span className="text-secondary">npm install bootstrap axios react-router-dom react-redux @reduxjs/toolkit</span></h3>
                             <p>*Console logs included to see number of Renders.</p>
                         </div>
                     </div>
