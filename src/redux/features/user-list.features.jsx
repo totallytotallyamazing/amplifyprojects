@@ -4,7 +4,7 @@ import axios from "axios";
 
 const initialState = {
     loading: false,
-    users: [],
+    myUsers: [],
     errorMessage: null
 }
 
@@ -18,10 +18,10 @@ export const getUsers = createAsyncThunk(
 );
 
 const userListSlice = createSlice({
-    name: 'users',
+    name: 'myUsers',
     initialState: initialState,
     extraReducers: (builder) => {
-        builder.addCase(getUsers.pending, (state) => {
+        builder.addCase(getUsers.pending, (state, action) => {
             // if (state.loading === false) {
             //     state.loading = true;
             //     state.currentRequestId = action.meta.requestId
@@ -39,8 +39,8 @@ const userListSlice = createSlice({
             // }
         
             state.loading = false;
-            state.users = action.payload;
-        }).addCase(getUsers.rejected, (state) => {
+            state.myUsers = action.payload;
+        }).addCase(getUsers.rejected, (state, action) => {
         //     const { requestId } = action.meta
         //     if (
         //     state.loading === false &&

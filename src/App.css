@@ -76,12 +76,12 @@
 }
 
 .screens {
-    width: 295px;
-    height: 545px;
+    width: 197px;
+    height: 426px;
 }
 
 /* Amplify styles */
-.amplify-flex {
+/* .amplify-flex {
     align-content: center !important;
     align-items: stretch;
     display: flex;
@@ -119,4 +119,4 @@
     width: 30rem;
     padding: 1rem;
     border: 1px solid grey;
-}
+} */

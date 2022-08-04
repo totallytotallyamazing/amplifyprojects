@@ -1,20 +1,19 @@
 import React from 'react';
-import useImagePreloader from './hooks/useImagePreloader';
-import desktop from '../img/desktop.png';
+// import useImagePreloader from './hooks/useImagePreloader';
+import desktop from '../img/desktop_sm.png';
 
 const Home = () => {
     
-    const preloadSrcList = [
-        desktop
-    ];
+    // const preloadSrcList = [
+    //     desktop
+    // ];
 
-    const { imagesPreloaded } = useImagePreloader(preloadSrcList);
-
+    // const { imagesPreloaded } = useImagePreloader(preloadSrcList);
     // console.log('imagesPreloaded:' + imagesPreloaded);
 
     console.log('RENDERING Home');
 
-    if (imagesPreloaded) {
+    // if (imagesPreloaded) {
         return (
             <React.Fragment>
                 <div className="container mt-5">
@@ -43,7 +42,7 @@ const Home = () => {
                 </div>
             </React.Fragment>
         );
-    }
+    // }
     
 };
 

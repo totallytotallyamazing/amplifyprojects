@@ -30,11 +30,5 @@
       }
     }
   },
-  "storage": {
-    "s3amplifyprojectsstorage00fb4978": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": []
-    }
-  }
+  "storage": {}
 }
