@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'; // , useRef, useState
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from '../redux/features/user-list.features';
-import { getAuthUser } from '../redux/features/auth.features';
+import { getAuthUser, removeAuthUser } from '../redux/features/auth.features';
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-// import Auth from '@aws-amplify/auth';
 
 const UserListRedux = () => {
 
@@ -12,35 +11,42 @@ const UserListRedux = () => {
 
     // get data from Redux Store
     let usersState = useSelector((store) => {
-        return store['users'];
+        return store['myUsers'];
     });
     let { loading, errorMessage, myUsers } = usersState;
+
     // set & get auth to localStorage in Redux Store
     let authUserState = useSelector((store) => {
         return store['authUser'];
     });
-    let { user } = authUserState;
+    let { user, local } = authUserState;
 
     const { route } = useAuthenticator(context => [context.route]);
     // const { user } = useAuthenticator(context => [context.user]);
 
-    console.log('RENDERING UserList & user: ' + user);
+    console.log('RENDERING UserList, user: ' + user + ', route: ' + route);
+    // console.log('user: ' + user);
     
     useEffect(() => {
-        if (user === null && route === 'authenticated') {
+        if ( user === null && route === 'authenticated' && !local ) {
             dispatch(getUsers());
+            // console.log('useEffect - getUsers()');
+        } 
+        
+        if( user === null && route === 'authenticated') {
             dispatch(getAuthUser());
-            console.log('dispatch(getAuthUser());');
-            console.log('dispatch(getUsers());');
+            // console.log('useEffect - getAuthUser(), user: ' + user);
+        } else if (user !== null && route === 'signIn') {
+            dispatch(removeAuthUser());
+            // console.log('useEffect - removeAuthUser() -- user: ' + user);
         }
-
-    }, [dispatch, route, user]);
+    }, [dispatch, route, user, local]);
 
     return (
         <React.Fragment>
             <div className="container mt-5">
             {
-                (route === 'signIn' || route === 'signUp') &&
+                route !== 'authenticated' &&
                 <div className="row">
                     <div className="col mt-3">
                         <p className="h3 text-primary">User List</p>

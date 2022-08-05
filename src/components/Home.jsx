@@ -1,6 +1,6 @@
 import React from 'react';
 // import useImagePreloader from './hooks/useImagePreloader';
-import desktop from '../img/desktop_sm.png';
+import desktop from '../img/desktop_xsm_64.png';
 
 const Home = () => {
     

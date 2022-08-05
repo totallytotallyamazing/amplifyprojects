@@ -8,7 +8,7 @@ import authReducer from './features/auth.features';
 const rootReducer = {
     counter: counterReducer,
     employees: employeesReducer,
-    users: userListReducer,
+    myUsers: userListReducer,
     rowcol: rowColReducer,
     carousel: carouselReducer,
     authUser: authReducer

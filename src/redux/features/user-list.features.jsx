@@ -9,7 +9,7 @@ const initialState = {
 }
 
 export const getUsers = createAsyncThunk(
-    'users/getUsers',
+    'myUsers/getUsers',
     async () => {
         let dataURL = `https://jsonplaceholder.typicode.com/users`;
         let response = await axios.get(dataURL);
